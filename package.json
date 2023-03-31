@@ -1,0 +1,11 @@
+{
+	"name": "php-restaurant",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.3.1"
+	}
+}
