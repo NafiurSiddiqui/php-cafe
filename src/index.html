@@ -11,10 +11,19 @@
 		<section
 			class="border-2 border-slate-300 p-4 align-top max-h-[60%] w-[60%]"
 		>
-			<h1 class="text-3xl font-bold text-gray-600 mb-4">Order item</h1>
-			<form class="border border-slate-300">
+			<h1 class="text-3xl font-bold text-gray-600 mb-4 text-center">
+				Order item
+			</h1>
+			<form class="divide-y-2">
+				<div class="flex justify-between bg-slate-200 px-1 mb-2">
+					<h6 class="text-gray-700">Item</h6>
+					<h6 class="text-gray-700">Qty</h6>
+				</div>
 				<div class="py-1 flex justify-between">
-					<label for="item" class="font-semibold text-gray-700"> Pasta </label>
+					<label for="item" class="font-semibold text-gray-700">
+						🍝 Pasta
+					</label>
+
 					<input
 						type="number"
 						name="pasta"
@@ -24,11 +33,13 @@
 					/>
 				</div>
 				<div class="py-1 flex justify-between">
-					<label for="item" class="font-semibold text-gray-700"> Pizza </label>
+					<label for="item" class="font-semibold text-gray-700">
+						🍕 Pizza
+					</label>
 					<input
 						type="number"
-						name="pasta"
-						id="pasta"
+						name="pizza"
+						id="pizza"
 						min="0"
 						class="border w-16 h-8 border-slate-400"
 					/>
