@@ -6,4 +6,17 @@
 	.borderTest {
 		@apply border border-red-400;
 	}
+
+	.header-1 {
+		@apply text-3xl;
+		@apply font-bold;
+		@apply text-gray-600;
+		@apply mb-4;
+	}
+	.header-2 {
+		@apply text-2xl;
+		@apply font-bold;
+		@apply text-gray-600;
+		@apply mb-4;
+	}
 }
