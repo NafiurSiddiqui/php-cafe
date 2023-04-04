@@ -1,7 +1,8 @@
 <?php
 
-$pizzaQt = $_POST['pizza'];
-$pastaQt = $_POST['pasta'];
+$pizzaQt = $_POST['Pizza'];
+$pastaQt = $_POST['Pasta'];
+$minestroneQt = $_POST['Minestrone'];
 
 ?>
 
@@ -17,7 +18,7 @@ $pastaQt = $_POST['pasta'];
     <title>Php-cafe - Order processor</title>
 </head>
 
-<body class="borderTest h-screen flex justify-center pt-8">
+<body class="borderTest h-screen flex justify-center pt-8 flex-col">
     <section class="border-2 border-slate-300 p-4 align-top max-h-[60%] w-[60%]">
 
         <h1 class="header-1 italic">Php Cafe</h1>
@@ -26,7 +27,9 @@ $pastaQt = $_POST['pasta'];
 
         <?php
         echo '<p>Order processed at <span class="font-bold text-gray-600"> '
-            . date('H:i, jS F Y') . '</span> </p>';
+            . date('H:i, jS F Y') . '</span> as following.</p>';
+
+        echo htmlspecialchars($pastaQt);
         ?>
     </section>
 </body>
