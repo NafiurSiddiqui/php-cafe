@@ -1,6 +1,6 @@
 <?php
 //items
-$items = [['name' => 'Pizza', 'icon' => '🍕'], ['name' => 'Pasta', 'icon' => '🍝'], ['name' => 'inestrone', 'icon' => '🍜']];
+$items = [['name' => 'Pizza', 'icon' => '🍕'], ['name' => 'Pasta', 'icon' => '🍝'], ['name' => 'Minestrone', 'icon' => '🍜']];
 
 ?>
 <!DOCTYPE html>
@@ -43,7 +43,10 @@ $items = [['name' => 'Pizza', 'icon' => '🍕'], ['name' => 'Pasta', 'icon' => '
                         echo $item['name']
                 ?>' min='0' class='border w-16 h-8 border-slate-400' />
 				</div>
+
+
 				<?php
+                
             endforeach;
 ?>
 
