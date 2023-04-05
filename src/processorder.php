@@ -1,8 +1,21 @@
 <?php
 
-$pizzaQt = $_POST['Pizza'];
-$pastaQt = $_POST['Pasta'];
-$minestroneQt = $_POST['Minestrone'];
+$pizzaQty = $_POST['Pizza'];
+$pastaQty = $_POST['Pasta'];
+$minestroneQty = $_POST['Minestrone'];
+
+//definite prize
+
+define('PIZZA', 58.00);
+define('PASTA', 35.00);
+define('MINESTRONE', 28.00);
+
+// echo PIZZA;
+
+//order amount
+
+$totalQty =(int) 0;
+$totalAmount = (float) 0.00;
 
 ?>
 
@@ -18,7 +31,7 @@ $minestroneQt = $_POST['Minestrone'];
         <title>Php-cafe - Order processor</title>
     </head>
 
-    <body class=" h-screen flex justify-center pt-8 flex-col">
+    <body class=" h-screen flex justify-center pt-8  items-center">
         <section class="border-2 border-slate-300 p-4 align-top max-h-[60%] w-[60%]">
 
             <h1 class="header-1 italic">Php Cafe</h1>
@@ -29,9 +42,23 @@ $minestroneQt = $_POST['Minestrone'];
         echo '<p>Order processed at <span class="font-bold text-gray-600"> '
             . date('H:i, jS F Y') . '</span> as following.</p>';
 
-echo htmlspecialchars($pastaQt) . 'Pasta <br>';
-echo htmlspecialchars($pizzaQt) . 'Pizza <br>';
-echo htmlspecialchars($minestroneQt) . 'Minestrone <br>';
+echo htmlspecialchars($pastaQty) . ' Pasta <br>';
+echo htmlspecialchars($pizzaQty) . ' Pizza <br>';
+echo htmlspecialchars($minestroneQty) . ' Minestrone <br>';
+
+//HEREDOC SYTNAX
+
+$pastaQty = htmlspecialchars($pastaQty);
+$pizzaQty = htmlspecialchars($pizzaQty);
+$minestroneQty = htmlspecialchars($minestroneQty);
+
+echo <<<theEnd
+    <h2>Order with Heredoc syntax</h2><br>
+    <p>{$pastaQty} Pasta</p>
+    <p>{$pizzaQty} Pizza</p>
+    <p>{$minestroneQty} Minestrone</p>
+theEnd
+
 ?>
         </section>
     </body>
