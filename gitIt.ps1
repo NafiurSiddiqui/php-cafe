@@ -2,7 +2,7 @@ function gitIt{
 
    git status
    git add -A
-   git commit -m "$args[0]"
+   git commit -m "$arg[0]"
    git push
 }
 
