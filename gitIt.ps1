@@ -32,7 +32,7 @@ function gitIt {
    git push
 }
 
-gitIt
+gitIt $args[0]
 
 
 
