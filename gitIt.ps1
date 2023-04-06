@@ -13,7 +13,7 @@ function gitIt {
    git status
    git add -A
    # Prompt the user to enter a commit message
-   $message = Read-Host "Enter a commit message"
+   $message = Read-Host "Enter aa commit message"
    git commit -m "$message"
    git push
 }
