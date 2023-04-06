@@ -7,10 +7,11 @@ $pizzaQty = $_POST['Pizza'];
 $pastaQty = $_POST['Pasta'];
 $minestroneQty = $_POST['Minestrone'];
 
+
 //order amount
 
-$totalQty =(int) 0;
-$totalAmount = (float) 0.00;
+$totalQty = 0;
+$totalAmount =  0.00;
 //definite prize
 
 define('PIZZA', 58.00);
@@ -20,9 +21,9 @@ define('MINESTRONE', 28.00);
 // echo PIZZA;
 
 //TOTAL AMOUNT
-$totalAmount = $pizzaQty * PIZZA
-    + $pastaQty * PASTA
-    +  $minestroneQty *MINESTRONE;
+$totalAmount = ($pizzaQty * PIZZA)
+    + ($pastaQty * PASTA)
+    +  ($minestroneQty *MINESTRONE);
 
 $subTotal = "<p > <span class='font-semibold'>Subtotal:</span> $ ". number_format($totalAmount, 2) . "</p>";
 
