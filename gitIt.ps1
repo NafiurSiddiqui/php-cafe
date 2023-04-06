@@ -20,26 +20,11 @@
 
 # gitIt
 
-# function gitIt {
-#    if ($args.Count -eq 0) {
-#       $message = Read-Host "Enter a commit message"
-#    } else {
-#       $message = $args[0]
-#    }
-#    git status
-#    git add -A
-#    git commit -m "$message"
-#    git push
-# }
-
-# gitIt
-
-
 function gitIt {
-   if ($input.Count -eq 0) {
+   if ($args.Count -eq 0) {
       $message = Read-Host "Enter a commit message"
    } else {
-      $message = $input[0]
+      $message = $args[0]
    }
    git status
    git add -A
@@ -47,6 +32,11 @@ function gitIt {
    git push
 }
 
-gitIt "my message"
+gitIt
+
+
+
+
+
 
 
