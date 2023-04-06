@@ -22,7 +22,7 @@
 
 function gitIt {
    if ($args.Count -eq 0) {
-      $message = Read-Host "Enter a commit message"
+      $message = Read-Host "Enter a damn commit message"
    } else {
       $message = $args[0]
    }
