@@ -10,3 +10,5 @@
     </head>
 
     <body class="h-screen flex justify-center items-center flex-col pt-8 relative">
+
+        <section class="border-2 border-slate-300 p-4 align-top max-h-[60%] w-[60%]">
