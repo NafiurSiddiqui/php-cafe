@@ -6,7 +6,9 @@ include './layout/header.php';
 $pizzaQty = $_POST['Pizza'];
 $pastaQty = $_POST['Pasta'];
 $minestroneQty = $_POST['Minestrone'];
-
+$address = preg_replace('/\t | \R/', ' ', $_POST['address']);
+$document_root = $_SERVER['DOCUMENT_ROOT'];
+$date = date('H:i, jS F Y');
 
 //order amount
 
@@ -43,8 +45,7 @@ $total = "</p> <span class='font-semibold'>Total</span> (Tax included):  $". num
 <h2 class="header-2 ">Ordered items</h2>
 
 <?php
-        echo '<p>Order processed at <span class="font-bold text-gray-600"> '
-            . date('H:i, jS F Y') . '</span> as following.</p>';
+        echo "<p>Order processed at <span class='font-bold text-gray-600'> {$date} </span> as following.</p>";
 
 // echo htmlspecialchars($pastaQty) . ' Pasta <br>';
 // echo htmlspecialchars($pizzaQty) . ' Pizza <br>';
