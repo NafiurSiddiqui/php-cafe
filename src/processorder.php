@@ -8,7 +8,7 @@ $pastaQty = $_POST['Pasta'];
 $minestroneQty = $_POST['Minestrone'];
 $address = preg_replace('/\t | \R/', ' ', $_POST['address']);
 $document_root = $_SERVER['DOCUMENT_ROOT'];
-echo $document_root;
+
 $date = date('H:i, jS F Y');
 
 //order amount
@@ -70,8 +70,13 @@ ORDERTEXT;
 
 
 
-$txtFile = fopen("$document_root/../orders/orders.txt", 'ab');
+$txtPath = $_SERVER['DOCUMENT_ROOT']. "/../orders/orders.txt";
 
+if (!file_exists($txtPath)) {
+    mkdir($_SERVER['DOCUMENT_ROOT']. "/../orders/", 0777, true);
+}
+
+$txtFile = fopen($txtPath, 'ab');
 
 
 if(!$txtFile) {
@@ -86,12 +91,6 @@ flock($txtFile, LOCK_UN);
 fclose($txtFile);
 
 //KITCHEN WILL READ THE ORDERS
-
-
-//TEST
-
-echo "<p class='font-bold text-gray-600'>Order succesfully written for the kitchen.</p>"
-
 
 ?>
 

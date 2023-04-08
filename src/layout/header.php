@@ -11,4 +11,4 @@
 
     <body class="h-screen flex justify-center items-center flex-col pt-8 relative">
 
-        <section class="border-2 border-slate-300 p-4 align-top h-[60%] w-[60%]">
+        <section class="border-2 border-slate-300 p-4 align-top h-min-[60%] w-[60%]">
