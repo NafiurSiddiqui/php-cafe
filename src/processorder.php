@@ -8,6 +8,7 @@ $pastaQty = $_POST['Pasta'];
 $minestroneQty = $_POST['Minestrone'];
 $address = preg_replace('/\t | \R/', ' ', $_POST['address']);
 $document_root = $_SERVER['DOCUMENT_ROOT'];
+echo $document_root;
 $date = date('H:i, jS F Y');
 
 //order amount
@@ -63,7 +64,11 @@ $orderTxt = <<<ORDERTEXT
     $totalAmount\t$address
 ORDERTEXT;
 
+
+
 //OPEN A FILE TO APPEND
+
+
 
 $txtFile = fopen("$document_root/../orders/orders.txt", 'ab');
 
@@ -76,7 +81,8 @@ if(!$txtFile) {
 
 flock($txtFile, LOCK_EX);
 
-fwrite($txtFile, LOCK_UN);
+fwrite($txtFile, $orderTxt, strlen($orderTxt));
+flock($txtFile, LOCK_UN);
 fclose($txtFile);
 
 //KITCHEN WILL READ THE ORDERS
