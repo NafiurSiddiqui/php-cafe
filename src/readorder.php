@@ -1,6 +1,6 @@
 <?php
 
-include './layout/header.php';
+include_once './layout/header.php';
 
 //create a short variable
 
@@ -26,10 +26,10 @@ while(!feof($orderFile)) {
 }
 
 flock($orderFile, LOCK_UN);
-fclose($orderFle);
+fclose($orderFile);
 
 
 
 
 
-include './layout/footer.php';
+include_once './layout/footer.php';

@@ -7,6 +7,10 @@
 		@apply border border-red-400;
 	}
 
+	.text-style {
+		@apply text-slate-500;
+	}
+
 	.header-1 {
 		@apply text-3xl;
 		@apply font-bold;
