@@ -60,8 +60,8 @@ $total = "</p> <span class='font-semibold'>Total</span> (Tax included):  $". num
 //PUT THE ORDER INTO A TEXT
 
 $orderTxt = <<<ORDERTEXT
-    $date\t$pizzaQty\t$pastaQty\t$minestroneQty\t
-    $totalAmount\t$address
+    $date\t$pizzaQty pizza\t$pastaQty pasta \t$minestroneQty minestrone\t
+    Total amount: $$totalAmount\t to send: $address
 ORDERTEXT;
 
 
@@ -108,7 +108,6 @@ fclose($txtFile);
         echo "<p>Order processed at <span class='font-bold text-gray-600'> {$date} </span> as following.</p>";
 
 //HEREDOC SYTNAX
-
 
 $pizzaQty = htmlspecialchars($pizzaQty);
 $minestroneQty = htmlspecialchars($minestroneQty);
