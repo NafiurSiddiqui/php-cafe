@@ -29,7 +29,11 @@ echo '<h1 class="header-1 text-center">Customer Order</h1>';
 // fclose($orderFile);
 
 $fp = fopen("$document_root/../orders/orders.txt", 'rb');
+flock($fp, LOCK_EX);
+
 echo nl2br(fread($fp, filesize("$document_root/../orders/orders.txt")));
+
+flock($fp, LOCK_UN);
 fclose($fp);
 
 
