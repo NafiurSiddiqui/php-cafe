@@ -24,6 +24,10 @@
 
                     <a href="../../../projects/cafe/src/readorder.php">Read order</a>
                 </li>
+                <li>
+
+                    <a href="../../../projects/cafe/src/feedback.php">Feedback</a>
+                </li>
             </ul>
         </nav>
 
