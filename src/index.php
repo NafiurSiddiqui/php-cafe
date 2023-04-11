@@ -5,7 +5,11 @@ include './layout/header.php';
 
 
 //items
-$items = [['name' => 'Pizza', 'icon' => '🍕'], ['name' => 'Pasta', 'icon' => '🍝'], ['name' => 'Minestrone', 'icon' => '🍜']];
+$items = [
+    ['name' => 'Pizza', 'icon' => '🍕'],
+    ['name' => 'Pasta', 'icon' => '🍝'],
+    ['name' => 'Minestrone', 'icon' => '🍜']
+];
 
 ?>
 
@@ -62,4 +66,5 @@ $items = [['name' => 'Pizza', 'icon' => '🍕'], ['name' => 'Pasta', 'icon' => '
 
 <?php
      include './layout/footer.php';
+
 ?>
